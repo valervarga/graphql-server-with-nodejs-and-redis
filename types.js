@@ -2,7 +2,11 @@ import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
 	type Query {
-		hello: String
+		get(key: String!): String
+	}
+
+	type Mutation {
+		set(key: String!, value: String!): Boolean!
 	}
 `;
 
